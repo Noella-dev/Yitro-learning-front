@@ -98,9 +98,9 @@
                     </li>
                 </ul>
                 <div class="auth-links">
-                    <ul class="nav-list">
-                        <li><a href="../authentification/connexion.php" class="btn-primary">Connexion</a></li>
-                        <li><a href="../authentification/inscription.php" class="btn-primary">S'inscrire</a></li>
+                   <ul class="nav-list">
+                        <li><a href="page/authentification/connexion.php" class="btn-primary">Connexion</a></li>
+                        <li><a href="page/authentification/inscription.php" class="btn-primary">Inscription</a></li>
                     </ul>
                 </div>
             </div>
