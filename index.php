@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yitro Learning - Apprentissage en Ligne</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="asset/images/Yitro consulting.png" type="image/png">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/images/Yitro consulting.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <!-- Header -->
@@ -108,7 +108,7 @@
     <section class="hero">
         <div class="container">
             <video autoplay muted loop playsinline class="hero-video">
-                <source src="asset/images/607453_People_Middle_aged_3840x2160.mp4" type="video/mp4">
+                <source src="assets/images/607453_People_Middle_aged_3840x2160.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge les vidéos.
             </video>
             <div class="hero-content">
@@ -130,7 +130,7 @@
             <div class="featured-grid">
                 <div class="training-card">
                     <div class="training-img">
-                        <img src="asset/images/social-media-marketing-concept-marketing-with-applications.jpg" alt="Marketing Digital">
+                        <img src="assets/images/social-media-marketing-concept-marketing-with-applications.jpg" alt="Marketing Digital">
                     </div>
                     <div class="training-content">
                         <h3>Marketing Digital</h3>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="training-card">
                     <div class="training-img">
-                        <img src="asset/images/front-view-woman-working-with-post-its.jpg" src="Développement personnel" alt="Développement Personnel">
+                        <img src="assets/images/front-view-woman-working-with-post-its.jpg" src="Développement personnel" alt="Développement Personnel">
                     </div>
                     <div class="training-content">
                         <h3>Développement personnel</h3>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="training-card">
                     <div class="training-img">
-                        <img src="asset/images/black-businessman-using-computer-laptop.jpg" alt="Finance & Investissement">
+                        <img src="assets/images/black-businessman-using-computer-laptop.jpg" alt="Finance & Investissement">
                     </div>
                     <div class="training-content">
                         <h3>Finance & Investissements</h3>
