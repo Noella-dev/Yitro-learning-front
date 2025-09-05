@@ -13,172 +13,9 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/inscription.css">
 </head>
-<style>
-/* Réinitialisation et styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8fafc;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Section Hero */
-.heros {
-    position: relative;
-    background: linear-gradient(109deg, #01ae8f, #132F3F);
-    padding: 80px 20px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.heros-content {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-}
-
-.heros-content h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.3;
-}
-
-.heros-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-#heros-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.2;
-}
-
-/* Section Choix */
-.choice-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.choice-section h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1a3c6d;
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 8px;
-}
-
-.choice-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.choice-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.choice-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.choice-card i {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.choice-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a3c6d;
-    margin-bottom: 15px;
-}
-
-.choice-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.choice-card .btn-choice {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.choice-card .btn-choice:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    text-decoration: none; /* Supprimer soulignement au survol */
-}
-
-/* Animation d'apparition */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .heros {
-        padding: 60px 15px;
-    }
-
-    .heros-content h1 {
-        font-size: 2rem;
-    }
-
-    .heros-content p {
-        font-size: 1rem;
-    }
-
-    .choice-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .choice-card {
-        max-width: 100%;
-    }
-}
-</style>
 <body>
     <!-- Header -->
     <header>
@@ -293,14 +130,14 @@ body {
                 <i class="fas fa-chalkboard-teacher"></i>
                 <h3>Devenir Formateur</h3>
                 <p>Partagez votre expertise avec des milliers d'apprenants et inspirez la prochaine génération de professionnels.</p>
-                <a href="../page/inscription-formateur.php" class="btn-choice">S'inscrire comme formateur</a>
+                <a href="./inscription-formateur.php" class="btn-choice">S'inscrire comme formateur</a>
             </div>
             <!-- Carte Apprenant -->
             <div class="choice-card fade-in">
                 <i class="fas fa-user-graduate"></i>
                 <h3>Devenir Apprenant</h3>
                 <p>Apprenez à votre rythme avec nos cours interactifs en technologie, programmation et bien plus encore.</p>
-                <a href="../page/inscription-apprenant.php" class="btn-choice">S'inscrire comme apprenant</a>
+                <a href="./inscription-apprenant.php" class="btn-choice">S'inscrire comme apprenant</a>
             </div>
         </div>
     </section>
