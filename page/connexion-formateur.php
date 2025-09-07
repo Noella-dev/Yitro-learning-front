@@ -8,13 +8,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Yitro Learning</title>
-    <link rel="icon" href="../asset/images/Yitro_consulting.png" type="image/png">
+    <link rel="icon" href="../assets/images/Yitro_consulting.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <style>
-/* Réinitialisation et styles globaux */
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +72,7 @@ body {
 .cta-buttons:hover {
     background-color: #e55a50;
     transform: translateY(-2px);
-    text-decoration: none; /* Supprimer soulignement au survol */
+    text-decoration: none;
 }
 
 #heros-animation {
@@ -382,7 +381,7 @@ body {
                     unset($_SESSION['success']);
                 }
                 ?>
-                <form id="formateurForm" action="../authentification/connexion-formateur.php" method="POST">
+                <form id="formateurForm" action="authentification/connexion-formateur.php" method="POST">
                     <div class="form-group">
                         <label for="emailFormateur" class="form-label">Adresse e-mail *</label>
                         <input type="email" class="form-control" id="emailFormateur" name="email" required>

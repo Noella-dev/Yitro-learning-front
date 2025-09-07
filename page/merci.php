@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription réussie</title>
-    <link rel="stylesheet" href="../asset/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <style>
         #success-message {
             background-color: #dff0d8;
