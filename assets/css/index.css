@@ -1,0 +1,1074 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+}
+
+/* Navigation */
+.main-nav {
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: #f8fafc;
+}
+
+.main-nav .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-nav .logo img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.main-nav .logo-text {
+  font-size: 28px;
+  font-weight: 500;
+  color: #f8fafc;
+  text-decoration: none;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.main-nav .nav-list li {
+  position: relative;
+}
+
+.main-nav .nav-list a {
+  text-decoration: none;
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-nav .nav-list a:hover {
+  color: #4a90e2;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 5px;
+}
+
+.main-nav .auth-links .nav-list {
+  gap: 10px;
+  list-style: none;
+}
+
+.main-nav .auth-links .btn-primary {
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #f8fafc;
+  border: 2px solid #f8fafc;
+}
+
+.main-nav .auth-links .btn-primary:hover {
+  background: rgb(193, 169, 39);
+  color: #f8fafc;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f8fafc;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    109deg,
+    rgba(19, 47, 63, 0.9),
+    rgba(1, 174, 143, 0.9)
+  );
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 60px);
+  }
+
+  .hero-video {
+    object-fit: cover;
+  }
+}
+
+.hero .container {
+  max-width: 1280px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary {
+  background: rgb(193, 169, 33);
+  color: #132f3f;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+
+.hero-buttons .btn-primary:hover {
+  background: rgb(213, 189, 33);
+  color: #f8fafc;
+  transform: translateY(-3px);
+}
+
+/* Featured Trainings Section */
+.featured-trainings {
+  padding: 80px 20px;
+  background-color: #e6ecef;
+}
+
+.featured-trainings .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #132f3f;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.training-card {
+  background-color: #f8fafc;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.training-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.training-content {
+  padding: 25px;
+}
+
+.training-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #132f3f;
+}
+
+.training-content p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.training-content .btn-learn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  color: #f8fafc;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.training-content .btn-learn:hover {
+  background: #4a90e2;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.about-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  margin-bottom: 40px;
+}
+
+.about-content1 h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #132f3f;
+  text-align: center !important;
+}
+.about-content1 p {
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card i {
+  font-size: 30px;
+  color: #01ae8f;
+  margin-bottom: 15px;
+}
+
+.category-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Trainers Section */
+.trainers-section {
+  padding: 80px 20px;
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  color: #f8fafc;
+  text-align: center;
+}
+
+.trainers-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.trainers-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.trainers-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trainers-section .btn-primary {
+  background: rgb(193, 169, 33);
+  color: #132f3f;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.trainers-section .btn-primary:hover {
+  background: rgb(236, 207, 43);
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background-color: #132f3f;
+  color: #f8fafc;
+  padding: 60px 20px;
+}
+
+.footer .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #4a90e2;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Decouvrir Yitro Styles */
+.decouvrir-yitro {
+  padding-top: 80px; /* Compensate for fixed navbar */
+}
+
+/* Qui sommes-nous */
+.qui-sommes-nous {
+  padding: 100px 20px;
+  background: url("https://via.placeholder.com/1920x600?text=Learning+Community")
+    no-repeat center/cover;
+  position: relative;
+  color: #f8fafc;
+}
+
+.qui-sommes-nous::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 47, 63, 0.7);
+  z-index: 1;
+}
+
+.qui-sommes-nous .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.qui-sommes-nous .content {
+  text-align: left;
+}
+
+.qui-sommes-nous h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.qui-sommes-nous p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  animation: fadeInLeft 1s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.qui-sommes-nous h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.qui-sommes-nous ul {
+  list-style: none;
+}
+
+.qui-sommes-nous ul li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.qui-sommes-nous ul li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-size: 18px;
+}
+
+.qui-sommes-nous .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qui-sommes-nous .image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInRight 1s ease-out;
+}
+
+/* Pourquoi Yitro */
+.pourquoi-yitro {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.pourquoi-yitro .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.pourquoi-yitro .content {
+  flex: 1;
+  text-align: left;
+}
+
+.pourquoi-yitro h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #132f3f;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.pourquoi-yitro p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.pourquoi-yitro .image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pourquoi-yitro .image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInRight 1s ease-out;
+}
+
+/* Valeurs Fondamentales */
+.valeurs-fondamentales {
+  padding: 80px 20px;
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  color: #f8fafc;
+}
+
+.valeurs-fondamentales .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.valeurs-fondamentales h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: left;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.valeurs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.valeur {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: 0;
+}
+
+.valeur:nth-child(odd) {
+  top: 20px;
+}
+
+.valeur:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valeur i {
+  font-size: 40px;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.valeur h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.valeur p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Equipe Yitro */
+.equipe-yitro {
+  padding: 80px 20px;
+  background-color: #e6ecef;
+}
+
+.equipe-yitro .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.equipe-yitro h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #132f3f;
+  margin-bottom: 50px;
+  text-align: left;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.membres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.membre {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: 0;
+}
+
+.membre:nth-child(even) {
+  top: 20px;
+}
+
+.membre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.membre img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.membre h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #132f3f;
+  margin-bottom: 10px;
+}
+
+.membre p {
+  font-size: 16px;
+  color: #666;
+}
+
+.equipe-yitro .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgb(193, 169, 33);
+  color: #132f3f;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.equipe-yitro .btn:hover {
+  background: rgb(213, 189, 33);
+  color: #f8fafc;
+  transform: translateY(-3px);
+}
+
+/* Témoignages */
+.temoignages {
+  padding: 80px 20px;
+  background: url("https://via.placeholder.com/1920x600?text=Testimonials")
+    no-repeat center/cover;
+  position: relative;
+  color: #f8fafc;
+}
+
+.temoignages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 47, 63, 0.7);
+  z-index: 1;
+}
+
+.temoignages .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.temoignages h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: left;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.mosaïque-temoignages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.temoignage {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(-2deg);
+}
+
+.temoignage:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.temoignage:hover {
+  transform: translateY(-10px) rotate(0deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.temoignage p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.temoignage span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffd700;
+}
+
+/* Blog Yitro */
+.blog-yitro {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+}
+
+.blog-yitro .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.blog-yitro h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #132f3f;
+  margin-bottom: 50px;
+  text-align: left;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:nth-child(2) {
+  grid-row: span 2;
+}
+
+.article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #132f3f;
+}
+
+.blog-yitro .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  color: #f8fafc;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.blog-yitro .btn:hover {
+  background: #4a90e2;
+  transform: translateY(-3px);
+}
+
+/* Rejoindre Yitro */
+.rejoindre-yitro {
+  padding: 80px 20px;
+  background: linear-gradient(109deg, #132f3f, #01ae8f);
+  color: #f8fafc;
+}
+
+.rejoindre-yitro .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.rejoindre-yitro h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: left;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.boutons-rejoindre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rejoindre-yitro .btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #ffd700;
+  color: #132f3f;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.rejoindre-yitro .btn:hover {
+  background-color: #fff;
+  color: #132f3f;
+  transform: translateY(-3px);
+}
+
+.rejoindre-yitro .image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rejoindre-yitro .image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInRight 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav .nav-list {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .training-img img {
+    height: 180px;
+  }
+
+  .trainers-section h2 {
+    font-size: 28px;
+  }
+
+  .qui-sennes-nous,
+  .pourquoi-yitro,
+  .valeurs-fondamentales,
+  .equipe-yitro,
+  .temoignages,
+  .blog-yitro,
+  .rejoindre-yitro {
+    padding: 60px 10px;
+  }
+
+  .qui-sennes-nous .container,
+  .pourquoi-yitro .container,
+  .rejoindre-yitro .container {
+    grid-template-columns: 1fr;
+  }
+
+  .qui-sennes-nous .image,
+  .pourquoi-yitro .image,
+  .rejoindre-yitro .image {
+    justify-content: center;
+  }
+
+  .qui-sennes-nous h1,
+  .pourquoi-yitro h1,
+  .valeurs-fondamentales h1,
+  .equipe-yitro h1,
+  .temoignages h1,
+  .blog-yitro h1,
+  .rejoindre-yitro h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .valeurs-fondamentales h1,
+  .equipe-yitro h1,
+  .temoignages h1,
+  .blog-yitro h1 {
+    text-align: center;
+  }
+
+  .boutons-rejoindre {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .temoignage {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: calc(100vh - 60px);
+  }
+
+  .hero-buttons .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .training-content h3 {
+    font-size: 20px;
+  }
+
+  .qui-sennes-nous,
+  .pourquoi-yitro,
+  .valeurs-fondamentales,
+  .equipe-yitro,
+  .temoignages,
+  .blog-yitro,
+  .rejoindre-yitro {
+    padding: 40px 10px;
+  }
+
+  .valeur i {
+    font-size: 30px;
+  }
+
+  .membre img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .rejoindre-yitro .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

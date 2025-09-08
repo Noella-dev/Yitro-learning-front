@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue - Yitro Learning</title>
-    <link rel="icon" href="../asset/images/Yitro_consulting.png" type="image/png">
+    <link rel="icon" href="../assets/images/Yitro_consulting.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../asset/css/catalogue.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/catalogue.css">
     <style>
         /* Styles pour la nouvelle interface du catalogue */
         .catalogue-hero {

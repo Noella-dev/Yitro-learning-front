@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
-require_once '../Backend/config.php'; // Fichier de connexion à la BDD (PDO)
+require_once '../Backend/config.php';
 
 $erreur = '';
 
@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $modules = $_POST['modules'];
     $price = $_POST['price'];
 
-    // Préparation des fichiers à uploader
     $uploadedFiles = [];
 
     if (!empty($_FILES['files']['name'][0])) {
