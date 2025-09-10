@@ -1,0 +1,33 @@
+<video controls>
+    <source src="../../uploads/lecons/lecon_3_2_1757415317.mp4" type="video/mp4">
+    Votre navigateur ne prend pas en charge la lecture de vidéos.
+</video>
+
+<?php if (isset($lecons[$module['id']]) && is_array($lecons[$module['id']]) && !empty($lecons[$module['id']])): ?>
+                            <?php foreach ($lecons[$module['id']] as $index => $lecon): ?>
+                                <div class="lecon">
+                                    <strong><?php echo htmlspecialchars($lecon['titre']); ?></strong> (<?php echo strtoupper(htmlspecialchars($lecon['format'])); ?>)
+                                    <?php
+                                    $is_video = in_array(strtolower($lecon['format']), ['video']);
+                                    $is_audio = in_array(strtolower($lecon['format']), ['audio']);
+                                    $is_pdf = in_array(strtolower($lecon['format']), ['pdf']);
+
+                                    // Le chemin correct du fichier
+                                    $filePath = "../../Uploads/lecons/" . rawurlencode($lecon['fichier']);
+                                    ?>
+                                    <div class="lesson-content">
+                                        <?php if ($is_video): ?>
+                                            <video controls width="600">
+                                                <source src="<?php echo $filePath; ?>" type="video/mp4">
+                                                Votre navigateur ne prend pas en charge la lecture de vidéos.
+                                            </video>
+                                        <?php elseif ($is_audio): ?>
+                                            <audio controls>
+                                                <source src="<?php echo $filePath; ?>" type="audio/mpeg">
+                                                Votre navigateur ne prend pas en charge la lecture d'audio.
+                                            </audio>
+                                        <?php elseif ($is_pdf): ?>
+                                            <a href="<?php echo $filePath; ?>" target="_blank">Voir le PDF</a>
+                                        <?php endif; ?>
+                                    </div>
+                             
