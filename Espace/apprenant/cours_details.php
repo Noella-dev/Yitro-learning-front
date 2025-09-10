@@ -768,20 +768,24 @@ $can_access = $is_free || $is_enrolled;
                                     $is_video = in_array(strtolower($lecon['format']), ['video']);
                                     $is_audio = in_array(strtolower($lecon['format']), ['audio']);
                                     $is_pdf = in_array(strtolower($lecon['format']), ['pdf']);
+
+                                    $filePath = "../../uploads/lecons/" . rawurlencode($lecon['fichier']);
+                                
                                     ?>
+                   
                                     <div class="lesson-content">
                                         <?php if ($is_video): ?>
-                                            <video controls>
-                                                <source src="../../Uploads/lecons/<?php echo htmlspecialchars($lecon['fichier']); ?>" type="video/mp4">
+                                            <video controls width="600">
+                                                <source src="<?php echo $filePath; ?>" type="video/mp4">
                                                 Votre navigateur ne prend pas en charge la lecture de vidéos.
                                             </video>
                                         <?php elseif ($is_audio): ?>
                                             <audio controls>
-                                                <source src="../../Uploads/lecons/<?php echo htmlspecialchars($lecon['fichier']); ?>" type="audio/mpeg">
+                                                <source src="<?php echo $filePath; ?>" type="audio/mpeg">
                                                 Votre navigateur ne prend pas en charge la lecture d'audio.
                                             </audio>
                                         <?php elseif ($is_pdf): ?>
-                                            <a href="../../Uploads/lecons/<?php echo htmlspecialchars($lecon['fichier']); ?>" target="_blank">Voir le PDF</a>
+                                            <a href="<?php echo $filePath; ?>" target="_blank">Voir le PDF</a>
                                         <?php endif; ?>
                                     </div>
                                     <?php if ($index === count($lecons[$module['id']]) - 1): ?>
@@ -969,7 +973,6 @@ $can_access = $is_free || $is_enrolled;
                 return;
             }
 
-            // Le code de la requête fetch() reste le même
             fetch('enroll_course.php', {
                 method: 'POST',
                 headers: {

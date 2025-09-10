@@ -38,15 +38,13 @@ try {
         exit();
     }
 
-    // Insérer l'inscription
     $stmt = $pdo->prepare("INSERT INTO inscriptions (utilisateur_id, cours_id, date_inscription, statut_paiement) VALUES (?, ?, NOW(), 'paye')");
     $stmt->execute([$utilisateur_id, $cours_id]);
 
     echo json_encode(['success' => true, 'message' => 'Inscription réussie !']);
 
 } catch (PDOException $e) {
-    // Gérer les erreurs de base de données
-    http_response_code(500); // Internal Server Error
+    http_response_code(500); 
     echo json_encode(['success' => false, 'message' => 'Erreur de base de données : ' . $e->getMessage()]);
 }
 ?>
